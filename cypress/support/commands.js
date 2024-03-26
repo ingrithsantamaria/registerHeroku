@@ -1,25 +1,11 @@
-// ***********************************************
-// This example commands.js shows you how to
-// create various custom commands and overwrite
-// existing commands.
-//
-// For more comprehensive examples of custom
-// commands please read more here:
-// https://on.cypress.io/custom-commands
-// ***********************************************
-//
-//
-// -- This is a parent command --
-// Cypress.Commands.add('login', (email, password) => { ... })
-//
-//
-// -- This is a child command --
-// Cypress.Commands.add('drag', { prevSubject: 'element'}, (subject, options) => { ... })
-//
-//
-// -- This is a dual command --
-// Cypress.Commands.add('dismiss', { prevSubject: 'optional'}, (subject, options) => { ... })
-//
-//
-// -- This will overwrite an existing command --
-// Cypress.Commands.overwrite('visit', (originalFn, url, options) => { ... })
+Cypress.Commands.add('fillContactForm', (name, birthdate, email, phone, address, city, state, postalCode, country) => {
+    cy.get('input#firstName').type(name);
+    cy.get('input#birthdate').type(birthdate);
+    cy.get('input#email').type(email);
+    cy.get('input#phone').type(phone);
+    cy.get('input#street1').type(address);
+    cy.get('input#city').type(city)
+    cy.get('input#stateProvince').type(state)
+    cy.get('input#postalCode').type(postalCode)
+    cy.get('input#country').type(country)
+  });
