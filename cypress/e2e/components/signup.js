@@ -8,6 +8,7 @@ export class Signup {
     getPassInput: () => cy.get("input#password"),
     getSubmitBtn: () => cy.get("button#submit"),
     getAddUserBtn: () => cy.get("button#add-contact"),
+    getLogoutBtn: () => cy.get("button#logout")
   };
   constructor() {
     const email = faker.internet.email();
@@ -16,9 +17,6 @@ export class Signup {
     this.lastName = "Santamaria";
     this.email = email;
     this.password = password;
-  }
-  navigate() {
-    cy.visit('/')
   }
   clickAndValidateSignUpButton = () => {
     this.elements.getSignUpBtn().should("be.visible").click();
@@ -60,4 +58,7 @@ export class Signup {
     cy.get("input#country").type(country);
     cy.get("button#submit").click();
   };
+  clickAndValidateLogout = () => {
+    this.elements.getLogoutBtn().should('be.visible').click()
+  }
 }

@@ -6,9 +6,9 @@ export class Login {
     getPassInput: () => cy.get("input#password"),
     getSubmitBtn: () => cy.get("button#submit")
   };
-  fillOutCredentials = () => {
-    this.elements.getEmailInput().type(signup.email)
-    this.elements.getPassInput().type(signup.password)
+  fillOutCredentials = (email, password) => {
+    this.elements.getEmailInput().type(email)
+    this.elements.getPassInput().type(password)
     this.elements.getSubmitBtn().click()
 }
 }

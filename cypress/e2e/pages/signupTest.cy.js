@@ -11,7 +11,7 @@ describe("template spec", () => {
     signup.clickAndValidateSignUpButton();
     signup.fillOutRegisterForm();
   });
-  it.only("Debería poder crear nuevos contactos con datos desde un CSV", () => {
+  it.only("User should be able to create new contacts with data from a csv file ", () => {
     signup.clickAndValidateSignUpButton();
     signup.fillOutRegisterForm();
     signup.clickAndValidateAddUserButton();
