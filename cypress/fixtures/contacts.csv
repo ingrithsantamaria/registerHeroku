@@ -1,5 +1,8 @@
-name,lastName,birthdate,email,phone,address1,address2,city,state,postalCode,country
+name,lastName,birthdate,email,phone,address,address2,city,state,postalCode,country
 Paula,Santamaria,1999-01-19,paula07@email.com,3222448918,Bosques del limonar,1 de Mayo,Cali,Valle del cauca,760001,Colombia
 Sebastian,Ricon,1997-06-05,sebas07@email.com,3123196836,Bosques del limonar,Ciudad Country,Jamundí,Valle del cauca,760001,Colombia
 Martha,Ballesteros,1974-08-29,martha07@email.com,3222448918,Doctrina Naranjos,Guavata,Velez,Santander,760001,Colombia
+Jose,Santamaria,1974-08-29,martha07@email.com,3222448918,Doctrina Naranjos,Guavata,Velez,Santander,760001,Colombia
+Teofilde,Olave,1974-08-29,martha07@email.com,3222448918,Doctrina Naranjos,Guavata,Velez,Santander,760001,Colombia
+
 

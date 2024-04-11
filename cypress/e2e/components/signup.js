@@ -8,7 +8,8 @@ export class Signup {
     getPassInput: () => cy.get("input#password"),
     getSubmitBtn: () => cy.get("button#submit"),
     getAddUserBtn: () => cy.get("button#add-contact"),
-    getLogoutBtn: () => cy.get("button#logout")
+    getLogoutBtn: () => cy.get("button#logout"),
+    getBodyTableContacts: () => cy.get('#myTable.contactTable-Body')
   };
   constructor() {
     const email = faker.internet.email();
@@ -38,7 +39,7 @@ export class Signup {
     birthdate,
     email,
     phone,
-    address1,
+    address,
     address2,
     city,
     state,
@@ -50,7 +51,7 @@ export class Signup {
     cy.get("input#birthdate").type(birthdate);
     cy.get("input#email").type(email);
     cy.get("input#phone").type(phone);
-    cy.get("input#street1").type(address1);
+    cy.get("input#street1").type(address);
     cy.get("input#street2").type(address2);
     cy.get("input#city").type(city);
     cy.get("input#stateProvince").type(state);
@@ -60,5 +61,8 @@ export class Signup {
   };
   clickAndValidateLogout = () => {
     this.elements.getLogoutBtn().should('be.visible').click()
+  }
+  validateDataOnTable = () => {
+    this.elements.getBodyTableContacts().should('not.be.empty')
   }
 }
